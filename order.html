@@ -24,5 +24,15 @@
 <script>
   confirmOrder();
 </script>
+<button onclick="goBack()">⬅️ Back</button>
+
+<script src="script.js"></script>
+<script>
+  confirmOrder(); // already present
+
+  function goBack() {
+    window.history.back();
+  }
+</script>
 </body>
 </html>

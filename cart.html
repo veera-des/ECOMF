@@ -17,12 +17,17 @@
 
   <main>
     <h2>Cart Items</h2>
-    <ul class="cart-list">
+    <ul id="cart-items" class="cart-list"></ul>
+    <p id="cart-total">Total: ₹0</p>
       <li>Smartphone - ₹15,000</li>
       <li>Headphones - ₹1,200</li>
     </ul>
     <p>Total: ₹16,200</p>
     <button onclick="location.href='order.html'">Place Order</button>
   </main>
+  <script src="script.js"></script>
+<script>
+  displayCart();
+</script>
 </body>
 </html>

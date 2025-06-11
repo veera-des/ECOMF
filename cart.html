@@ -44,5 +44,15 @@
     window.location.href = "order.html";
   }
 </script>
+<!-- 👇 Place at the end of cart.html -->
+<script src="script.js"></script>
+<script>
+  // On page load, display cart only if items exist
+  document.addEventListener("DOMContentLoaded", () => {
+    displayCart();
+  });
+</script>
+</body>
+</html>
 </body>
 </html>

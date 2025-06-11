@@ -29,5 +29,20 @@
 <script>
   displayCart();
 </script>
+<button onclick="goBack()">⬅️ Back</button>
+<button onclick="goToOrder()">🧾 Go to Order</button>
+
+<script src="script.js"></script>
+<script>
+  displayCart(); // already present
+
+  function goBack() {
+    window.history.back();
+  }
+
+  function goToOrder() {
+    window.location.href = "order.html";
+  }
+</script>
 </body>
 </html>

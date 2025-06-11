@@ -1,4 +1,4 @@
-// Store products when "Add to Cart" is clicked
+// Add product to cart
 function addToCart(productName, productPrice) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push({ name: productName, price: productPrice });
@@ -6,7 +6,7 @@ function addToCart(productName, productPrice) {
   alert(`${productName} added to cart!`);
 }
 
-// Display cart items on cart.html
+// Display cart items
 function displayCart() {
   const cartList = document.getElementById("cart-items");
   const totalDisplay = document.getElementById("cart-total");
@@ -24,7 +24,20 @@ function displayCart() {
   totalDisplay.textContent = `Total: ₹${total}`;
 }
 
-// Clear cart after order
+// Confirm order (clear cart)
 function confirmOrder() {
   localStorage.removeItem('cart');
+}
+
+// Navigation functions
+function goBack() {
+  window.history.back();
+}
+
+function goToCart() {
+  window.location.href = "cart.html";
+}
+
+function goToOrder() {
+  window.location.href = "order.html";
 }

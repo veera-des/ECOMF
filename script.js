@@ -6,13 +6,19 @@ function addToCart(productName, productPrice) {
   alert(`${productName} added to cart!`);
 }
 
-// Display cart items
 function displayCart() {
   const cartList = document.getElementById("cart-items");
   const totalDisplay = document.getElementById("cart-total");
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  let total = 0;
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
   cartList.innerHTML = "";
+  let total = 0;
+
+  if (cart.length === 0) {
+    cartList.innerHTML = "<li>Your cart is empty.</li>";
+    totalDisplay.textContent = "Total: ₹0";
+    return;
+  }
 
   cart.forEach(item => {
     let li = document.createElement("li");
